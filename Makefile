@@ -6,7 +6,7 @@
 #    By: salsoysa <salsoysa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/30 14:58:55 by salsoysa          #+#    #+#              #
-#    Updated: 2025/04/30 14:59:20 by salsoysa         ###   ########.fr        #
+#    Updated: 2025/07/22 11:58:20 by akaiissa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ LIBN = libft.a
 LIB = $(LIBP)$(LIBN)
 
 INC = -I ./includes/libft/\
-	  -I ./includes/headers/\
+	  -I ./includes/
 
 all : $(LIB) $(NAME)
 
@@ -40,7 +40,7 @@ $(LIB):
 
 $(NAME): $(OBJ)
 	@echo "Compiling push_swap..."
-	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIB) $(INC) 
+	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIB) $(INC)
 	@echo "Done. push_swap is ready for use"
 
 a : all clean
